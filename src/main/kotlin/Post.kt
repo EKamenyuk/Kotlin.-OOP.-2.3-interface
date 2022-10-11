@@ -10,8 +10,8 @@ data class Post(
     val friendsOnly : Boolean,
     val comments : Comments,
     val likes : Likes,
-    val reposts : Reposts,
-    val views : Views,
+    val reposts : Reposts?,
+    val views : Views?,
     val postType : String,
     val signerId : Long,
     val canPin : Boolean,
@@ -20,5 +20,8 @@ data class Post(
    val isPinned : Boolean,
     val markedAsAds : Boolean,
     val isFavorite : Boolean,
-    val postponedId : Long
+    val postponedId : Long,
+    val attachments : Array<Attachment>? = emptyArray(),
+    val copyHistory : Array<Post>? = emptyArray(),
+
 )

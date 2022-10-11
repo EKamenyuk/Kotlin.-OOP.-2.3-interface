@@ -1,9 +1,8 @@
-
-class PhotoAttachment(param : Photo) : Attachment {
+class PhotoAttachment(param: Photo) : Attachment {
     override val type: String = "photo"
     val photo = param
 
-    override fun toString() : String{
+    override fun toString(): String {
         return "\n  $photo"
     }
 }
